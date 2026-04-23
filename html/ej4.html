@@ -4,8 +4,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Practica1-HTML</title>
+
+    <style>
+        .mail{
+            display: flex;
+            align-items: flex-start; 
+            margin-bottom: 10px;
+        }
+        
+        .consulta{
+            display: flex;
+            align-items: flex-start; 
+            margin-bottom: 10px;
+        }
+
+        .txt {
+            width: 80px;
+            display: inline-block;
+        }
+
+        #consultausuario {
+            height: 80px;
+            width: 250px;
+        }
+
+        #primerBoton{
+            margin-left: 80px;
+        }
+
+        .botones{
+            background-color: white;
+            margin-right: 5px; 
+        }
+    </style>
+
 </head>
 <body>
+    <a href="https://www.frro.utn.edu.ar/" target="_blank">
+        <img src="utn.jpg" alt="logo universidad" width="60px" height="60px" align="left"/>
+    </a>
+
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <hr />
+
+    <h1>AÑO 2008</h1>
+
+    <table border="1" padding="0" cellspacing="0">
+        <tr>
+            <th colspan="2">Exámenes</th>
+        </tr>
+        <tr>
+            <td rowspan="2">Fecha: ............. </td>
+            <td>Examen</td>
+        </tr>
+        <tr>
+            <td>Fecha</td>
+        </tr>
+    </table>
+
+    <ol>
+        <a href="#enunciado"><li>Enunciado del examen</li></a>
+        <a href="resolucion.html" target="_blank"><li>Resolucion</li></a>
+    </ol>
+
+    <div>
+        <form action="mailto:x@x.com" method="post" enctype="text/plain">
+        <div class="mail">
+            <strong class="txt">e-mail:</strong>
+            <input type="email" id="emailusuario" required>
+        </div>
+
+        <div class="consulta">
+            <strong class="txt">consulta:</strong>
+            <input type="text" id="consultausuario">
+        </div>
+
+        <div>
+            <input type="submit" value="Enviar" id="primerBoton" class="botones">
+            <input type="reset" value="Borrar" class="botones">
+        </div>
+        </form>
+    </div>
+
     
+
 </body>
 </html>
