@@ -1,0 +1,226 @@
+-Ejercicio 1-
+1. HTML fue creado en el año 1990 por Tim Berners-Lee y fue popularizado
+por el navegador Mosaic (1993). Entre sus varias versiones se pueden mencionar a 
+HTML 2.0, HTML 3.2, HTML 4.01, y su ultima versión, HTML 5.0.
+
+2. El W3C recomienda que los agentes de usuario y los autores produzcan documentos HTML 4.01 en vez de documentos HTML 4.0. 
+El W3C recomienda que los autores produzcan documentos HTML 4.0 en vez de documentos HTML 3.2.  Por razones de compatibilidad con 
+versiones anteriores, el W3C también recomienda que las herramientas que interpreten HTML 4.0 sigan dando soporte a HTML 3.2 y a HTML 2.0
+
+3. Un elemento o atributo desaprobado es aquel que ha quedado anticuado por la presencia de estructuras nuevas. Por otro 
+lado, un elemento o atributo obsoleto es aquél para el cual no hay garantía de soporte por parte de un agente de usuario.
+
+4. El DTD (definición del tipo de documento) define la sintaxis de las estructuras de formato, y se coloca en la primera línea del 
+archivo antes de la etiqueta <html>. En HTML 4.01 existían dos tipos principalesde DTD: Transitional (transitoria) y Strict (estricta).
+
+5. Llamamos metadatos a toda la información sobre un documento más que solo su contenido propio. Se especifican mediante la etiqueta <meta>, 
+la cual se coloca siempre dentro de la sección <head> del documento. Por ejemplo: Por ejemplo, "<META name="Author" content="Dave Raggett">".
+
+-Ejercicio 2-
+2.a) Es un comentario. Se puede colocar en cualquier sección del código. No produce efecto visual en el navegador y sirve para documentar cosas en el código.
+2.b) Elemento de caja/bloque. Se coloca solamente en el <body>. Sirve para agrupar contenidos. El atributo id identifica de forma única al elemento pero no es obligatorio.
+2.c) Elemento de imagen. Se coloca solo en el <body>. El atributo src es obligatorio pues indica la ruta de la imagen, y alt es obligatorio por buenas practicas ya que 
+muestra un texto si la imagen no carga. Los atributos id, name, width, height, longdesc no son obligatorios pues cambian en general elementos visuales y agregan utilidad
+para la hora de codificar (el id solamente).
+2.d) Metadatos. Se colocan exclusivamente en la parte del <head>. Definen palabras clave para los motores de búsqueda. Ningún atributo resulta obligatorio, todo depende de
+la utilidad o fin que tenga el uso de <meta>.
+2.e) Hiperenlace. Se coloca en el <body>. El atributo href es totalmente obligatorio pues sirve para indicar el destino del enlace, mientras que sus otros atributos no
+resultan obligatorios de colocar (pero constituyen buenas practicas como por ejemplo el type).
+2.f) Tablas. Se coloca unicamente en el <body>. Define filas <tr> y celdas de datos <td> o encabezados <th>. Todas estas sub-etiquetas pueden contener atributos que
+afecten al aspecto pero ninguno indispensable. 
+
+-Ejercicio 3-
+3.a) 	<a href="http://www.google.com.ar">Click aquí para ir a Google</a> -> Abre el enlace en la misma pestaña que ya estamos.
+	<a href="http://www.google.com.ar" target="_blank">Click aquí para ir a Google</a> -> Abre el enlace en una pestaña nueva.
+	<a href="http://www. google.com.ar" type="text/html" hreflang="es" charset="utf-8" rel="help"> -> Añade metainformación semántica sobre el destino del enlace.
+	<a href="#">Click aquí para ir a Google</a> -> No abre ninguna pestaña pues es un tipo de placeholder.
+	<a href="#arriba">Click aquí para volver arriba</a> -> Me dirige hacia una parte de la pagina en la que me encuentro previamente declarada (ancla).
+	<a name="arriba" id="arriba"></a> -> Es para definir el ancla pues contiene el atributo name asociado a la palabra "arriba".
+
+3.b) 	<p><img src="im1.jpg" alt="imagen1" /><a href="http://www.google.com.ar">Click aquí</a></p> -> Muestra una imagen y al tocar el texto "Click aquí" nos abre el hiperenlace.
+	<p><a href="http://www.google.com.ar"><img src="im1.jpg" alt="imagen1" /></a> Click aquí</p> -> Muestra una imagen la cual al tocarse nos abre el hiperenlace y además un texto que no tiene esa propiedad.
+	<p><a href="http://www.google.com.ar"><img src="im1.jpg" alt="imagen1" />Click aquí</a></p> -> Muestra una imagen y un texto, al tocarse cualquiera de los 2 nos abre el hiperenlace.
+	<p><a href="http://www.google.com.ar"><img src="im1.jpg" alt="imagen1" /></a> <a href="http://www.google.com.ar">Click aquí</a></p> -> Muestra una imagen que al tocarla nos llevara a un link, y un texto que
+	al tocarlo nos llevara a otro link distinto pues estan definidos en diferentes etiquetas <a>.
+
+3.c)	<ul>		<ol>		<ol>			<blockquote>
+	<li>xxx</li>	<li>xxx</li>	<li>xxx</li>		<p>1. xxx<br />
+	<li>yyy</li>	<li>yyy</li>	</ol>			2. yyy<br />
+	<li>zzz</li>	<li>zzz</li>	<ol>			3. zzz</p>
+	</ul>		</ol>		<li value="2">yyy</li>	</blockquote>	
+					</ol>
+					<ol>
+					<li>value="3">zzz</li>
+					</ol>
+
+	-El primer caso muestra una lista desordenada.
+	-El segundo caso muestra una lista ordenada.
+	-El tercer caso muestra tres listas ordenadas separadas (y para que los indices queden bien especifica el valor con el atributo value).
+	-El cuarto caso muestra una forma de simular una lista sin usar las etiquetas reales de lista <ul> o <ol>. La etiqueta <blockquote> produce un efecto visual de sangría 
+	o margen en ambos lados del bloque de texto y con la etiqueta <br> fuerza los saltos de linea.
+
+3.d)	<table border="1" width="300">	<table border="1" width="300">
+	<tr>				<tr>
+	<th>Columna 1</th>		<td><div align="center"><strong>Columna1</strong></div></td>
+	<th>Columna 2</th>		<td><div align="center"><strong>Columna2</strong></div></td>
+	</tr>				</tr>
+	<tr>				<tr>
+	<td>Celda 1</td>		<td>Celda 1</td>
+	<td>Celda 2</td>		<td>Celda 2</td>
+	</tr>				</tr>
+	<tr>				<tr>
+	<td>Celda 3</td>		<td>Celda 3</td>
+	<td>Celda 4</td>		<td>Celda 4</td>
+	</tr>				</tr>
+	</table>			</table>
+	
+	-Las salidas de ambos casos son exactamente iguales visualmente, pero el caso 2 incluyo la equiqueta strong en sus encabezados ademas de meterlos dentro de un contenedor <div>.
+
+3.e) 	<table width="200">			<table width="200">
+	<caption>				<tr>
+	Título					<td colspan="3"><div align="center">Título</div></td>
+	</caption>				</tr>
+	<tr>					<tr>
+	<td bgcolor="#dddddd">&nbsp;</td>	<td bgcolor="#dddddd">&nbsp;</td>
+	<td bgcolor="#dddddd">&nbsp;</td>	<td bgcolor="#dddddd">&nbsp;</td>
+	<td bgcolor="#dddddd">&nbsp;</td>	<td bgcolor="#dddddd">&nbsp;</td>
+	</tr>					</tr>
+	<tr>					<tr>
+	<td bgcolor="#dddddd">&nbsp;</td>	<td bgcolor="#dddddd">&nbsp;</td>
+	<td bgcolor="#dddddd">&nbsp;</td>	<td bgcolor="#dddddd">&nbsp;</td>
+	<td bgcolor="#dddddd">&nbsp;</td>	<td bgcolor="#dddddd">&nbsp;</td>
+	</tr>					</tr>
+	</table>				</table>
+
+	-Las salidas de ambos casos se ven exactamente iguales visualmente, pero utilizan diferentes metodos para mostrar el titulo de la tabla, uno usando la etiqueta <caption> y otro
+	directamente colocando el titulo dentro de un <td> separado con atributo colspan para expandir la celda y poniendo el titulo dentro de un contenedor para centrarlo.
+
+3.f)	<table width="200">					<table width="200">
+	<tr>							<tr>
+	<td colspan="3"><div align="center">Título</div></td>	<td colspan="3"><div align="center">Título</div></td>
+	</tr>							</tr>
+	<tr>							<tr>
+	<td rowspan="2" bgcolor="#dddddd">&nbsp;</td>		<td colspan="2" bgcolor="#dddddd">&nbsp;</td>		
+	<td bgcolor="#dddddd">&nbsp;</td>			<td bgcolor="#dddddd">&nbsp;</td>			
+	<td bgcolor="#dddddd">&nbsp;</td>			</tr>
+	</tr>							<tr>
+	<tr>							<td bgcolor="#dddddd">&nbsp;</td>
+	<td bgcolor="#dddddd">&nbsp;</td>			<td bgcolor="#dddddd">&nbsp;</td>
+	<td bgcolor="#dddddd">&nbsp;</td>			<td bgcolor="#dddddd">&nbsp;</td>
+	</tr>							</tr>
+	</table>						</table>
+
+	-Lo que sucede con la primera salida es que se come 2 filas en una sola y la segunda opción se come a 2 columnas en una sola, por lo que visualmente son muy diferentes.
+
+3.g)	<table width="200" border="1">				<table width="200" border="1" cellpadding="0" cellspacing="0">
+	<tr>							<tr>
+	<td colspan="3"><div align="center">Título</div></td>	<td colspan="2"><div align="center">Título</div></td>
+	</tr>							</tr>
+	<tr>							<tr>
+	<td colspan="2" rowspan="2">&nbsp;</td>			<td rowspan="2">&nbsp;</td>
+	<td>&nbsp;</td>						<td>&nbsp;</td>	
+	</tr>							</tr>
+	<tr>							<tr>
+	<td width="50%">&nbsp;</td>				<td width="50%">&nbsp;</td>
+	</tr>							</tr>
+	</table>						</table>
+
+	-La primera es una de 3 modificada con fusion para parecer de 2, y la otra es simplemente de 2. Además, visualmente lo que más se nota, es el cambio en el borde de las tablas.
+
+3.h)	<form id="form1" name="form1" action="procesar.php" method="post" target="_blank">
+	<fieldset>
+	<legend>LOGIN</legend>
+	Usuario: <input type="text" id="usu1" name="usu1" value="xxx" /><br />
+	Clave: <input type="password" id="clave1" name="clave1" value="xxx" />
+	</fieldset>
+	<input type="submit" id="boton1" name="boton1" value="Enviar" />
+	</form>
+	
+	-Muestra un reborde, usa el metodo post por lo que no se muestra información sensible, y viene con valores predeterminados cargados en la seccion para completar.
+	Utiliza las etiquetas <fieldset> y <legend> para agrupar los campos. Input Type = "submitt".
+
+	<form id="form2" name="form2" action="" method="get" target="_blank">
+	LOGIN<br />
+	<label>Usuario: <input type="text" id="usu2" name="usu2" /></label><br />
+	<label>Clave: <input type="text" id="clave2" name="clave2" /></label><br />
+	<input type="submit" id="boton2" name="boton2" value="Enviar" />
+	</form>
+
+	-No muestra un reborde, usa el metodo get por lo que se muestra información sensible, y no viene con valores predeterminados cargados en la seccion para completar. 
+	Tiene distinta sangria. No usa recuadros de agrupación y emplea la etiqueta <label> para envolver cada campo. Input Type = "submitt".
+
+	<form id="form3" name="form3" action="mailto:xx@xx.com” enctype=text/plain method="post" target="_blank">
+	<fieldset>
+	<legend>LOGIN</legend>
+	Usuario: <input type="text" id="usu3" name="usu3" /><br />
+	Clave: <input type="password" id="clave3" name="clave3" />
+	</fieldset>
+	<input type="reset" id="boton3" name="boton3" value="Enviar" />
+	</form>
+
+	-Muestra un reborde, usa el metodo post por lo que no se muestra información sensible, y no tiene informacion precargada.
+	Utilizan las etiquetas <fieldset> y <legend> para agrupar los campos. Input Type = "reset".
+
+3.i)	<label>Botón 1
+	<button type="button" name="boton1" id="boton1">
+	<img src="logo.jpg" alt="Botón con imagen " width="30" height="20" /><br />
+	<b>CLICK AQUÍ</b></button>
+	</label>
+
+	-Utiliza la etiqueta button para poder crear un boton, y muestra el texto BOTON CON IMAGEN y CLICK AQUÍ.
+
+	<label>Botón 2
+	<input type="button" name="boton2" id="boton2" value="CLICK AQUÍ" />
+	</label>
+
+	-Utiliza el iput para simular un "boton" donde aparece el texto asociado al valor del input "CLICK AQUÍ".
+
+3.j)	<p><label><input type="radio" name="opcion" id="X" value="X" />X</label><br />
+	<label><input type="radio" name="opcion" id="Y" value="Y" />Y</label></p>
+
+	- Le asigna el nombre opcion a ambos elementos, por lo que solo podemos clickear uno a la vez, pues ese nombre no puede tener 2 valores al mismo tiempo.
+
+	<p><label><input type="radio" name="opcion1" id="X" value="X" />X</label><br />
+	<label><input type="radio" name="opcion2" id="Y" value="Y" />Y</label></p>
+	
+	-Le asigna diferentes nombres a las dos opciones, por lo que pueden ser clickeadas simultaneamentes y mantener los valores.
+
+3.k)	<select name="lista">		<select name="lista[]" multiple="multiple">
+	<optgroup label="Caso 1">	<optgroup label=" Caso 1">
+	<option>Mayo</option>		<option>Mayo</option>
+	<option>Junio</option>		<option>Junio</option>
+	</optgroup>			</optgroup>
+	<optgroup label="Caso 2">	<optgroup label=" Caso 2">
+	<option>Mayo</option>		<option>Mayo</option>
+	<option>Junio</option>		<option>Junio</option>
+	</optgroup>			</optgroup>
+	</select>			</select>
+
+	-La primera opcion crea un selector que hace aparecer una mini ventana emergente, mientras que la segunda opcion crea un selector con una barra desplazadora.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
