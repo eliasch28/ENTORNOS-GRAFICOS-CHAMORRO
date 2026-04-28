@@ -1,0 +1,144 @@
+Ejercicio 1)
+
+1. CSS son las siglas de hojas de estilo en cascada. Las hojas de estilo son una tecnología que nos permite controlar la apariencia de una página web. 
+   Y por esto ultimo, sirve para describir como los elementos dispuestos en la página son presentados al usuario.
+2. Las hojas de estilo funcionan mediante reglas que le indican al navegador cómo debe mostrar los elementos. Cada regla se compone de tres partes fundamentales:
+    -El selector: indica al navegador qué parte del documento se verá afectada (por ejemplo, una etiqueta específica).
+    -La propiedad: especifica qué aspecto del diseño se va a cambiar (como el color o el tipo de letra).
+    -El valor: establece la configuración específica para la propiedad elegida. Si una regla tiene varias propiedades para un mismo selector, estas deben separarse con un punto y coma (;).
+3. Las reglas de estilo pueden asociarse a las marcas HTML de tres maneras diferentes:
+    -Directamente en una etiqueta: usando la propiedad style dentro de una etiqueta de HTML.
+    -En el "head" de la página: dentro de una sección especial encerrada entre las marcas <style> y </style>.
+    -En un archivo externo: agrupando las reglas en un archivo independiente con extensión .css y enlazándolo con el HTML.
+4. -Selector de tipo: selecciona todos los elementos que tienen un nombre de etiqueta HTML específico. || Ejemplo: p { color: red; } afecta a todos los párrafos.
+   -Selector de clase: permite aplicar estilos a elementos que tienen un atributo class específico, usando un punto antes del nombre. || Ejemplo: .importante { font-size: 20px; }.
+   -Selector de ID: utilizado para identificar un único elemento específico mediante su atributo id, usando el signo #. || Ejemplo: #distinto { color: red; }.
+   -Selector universal: representado por un asterisco *, aplica el estilo a todos los elementos del documento. || Ejemplo: * { color: green; }.
+5. Las pseudo-clases clasifican a los elementos basado en características más allá de su nombre, atributos o contenido (atributos que no pueden deducirse de la estructura del documento). 
+   Las pseudo-clases pueden ser dinámicas, en el sentido de que un elemento puede adquirir o perder una pseudo-clase a medida que el usuario interactúa con el documento.
+   Entre las pseudo-clases más utilizadas en vinculos tenemos:
+	 -:link se aplica a los vínculos que aún no han sido visitados.
+	 -:visited se aplica una vez que el vínculo ha sido visitado por el usuario. 
+	 -:hover se aplica usuario pasa el puntero del mouse sobre el enlace.
+         -:active se aplica en el momento exacto en que se hace clic sobre el enlace.
+6. La herencia es el proceso por el cual los elementos que se encuentran dentro de otros (descendientes) adoptan las propiedades de estilo definidas para su elemento "padre". Por ejemplo, como 
+   la propiedad 'color' es heredada, todos los descendientes del elemento BODY heredarán el color 'black': BODY { color: black; }.
+7. El proceso de cascada es el mecanismo que determina qué reglas de estilo se aplican a un elemento cuando existen múltiples fuentes de estilo que se contradicen. Esto permite 
+   describir cómo se presentará el documento en diferentes medios (pantalla, impresión, voz) siguiendo un orden de precedencia y especificidad.  Este sistema es fundamental para lograr la separación 
+   efectiva entre el contenido semántico y la presentación visual.
+
+Ejercicio 2)
+
+Reglas:
+ -Regla 1: "p#normal"
+        Selector: etiqueta <p> que tenga el ID "normal".
+        ¿Que hace?: pone como fuente Arial o Helvetica, el tamaño en 11 píxeles y el ancho de la fuente en "bold".
+ -Regla 2: "*#destacado"
+        Selector: cualquier elemento que tenga el ID "destacado".
+        ¿Que hace?: define un borde sólido, de color azul y con un ancho de 2 píxeles.
+ -Regla 3: "#distinto"
+        Selector: cualquier elemento con el ID "distinto".
+        ¿Que hace?: define un color de fondo #9EC7EB y el color del texto en rojo.
+Efectos que provoca:
+ <p id="normal">: el parrafo "Este es un párrafo" se verá en negrita, fuente Arial y tamaño 11 pixeles de tamaño de fuente.
+ <p id="destacado">: el parrafo tendrá un recuadro azul sólido de 2px de grosor a su alrededor.
+ <table id="destacado">:la tabla tendra un borde azul sólido de 2px de grosor.
+ <p id="distinto">: el parrafo aparecerá con letras rojas sobre un fondo de color #9EC7EB.
+
+(IGUALMENTE ES UNA MALA PRACTICA APLICAR LA MISMA ID A VARIOS ELEMENTOS, EL ID DEBERIA SER UNICO)
+
+Ejercicio 3)
+
+Reglas:
+ -Regla 1: "p.quitar"
+	Selector: etiqueta <p> que tenga clase "quitar".
+	¿Que hace?: pone como color de fuente al rojo para todos los parrafos con esa clase.
+ -Regla 2: "*.desarrollo"
+	Selector: todos los elementos con la clase "desarrollo".
+	¿Que hace?: pone 8px como tamaño de fuente.
+ -Regla 3: ".importante"
+	Selector: todos los elementos con la clase "importante".
+	¿Que hace?: pone 20px como tamaño de fuente.
+Efectos que provoca:
+ <p class="desarrollo">: el texto del parrafo tendra tamaño de fuente de 8px.
+ <p class="quitar">: el texto del parrafo tendra color de fuente rojo.
+ <p class="importante">: el texto del parrafo tendra tamaño de fuente de 20px.
+ <h1 class="quitar">: el texto del titulo tendra color de fuente rojo.
+ <p class="quitar importante">: el texto del parrafo tendra color de fuente rojo y tamaño de fuente de 20px.
+
+(UN MISMO ELEMENTO PUEDE TENER MULTIPLES CLASES SEPARADAS POR UN ESPACIO ENTRE " ")
+
+Ejercicio 4)
+
+Declaraciones: 
+	* {color:green; }
+	a:link {color:gray }
+	a:visited{color:blue }
+	a:hover {color:fuchsia }
+	a:active {color:red }
+	p {font-family: arial,helvetica;font-size: 10px;color:black; }
+	.contenido{font-size: 14px;font-weight: bold; }
+
+Lado izquierdo:
+	<body>
+	<p class="contenido" style="font-weight: normal;">
+	Este es un texto ...............</p>
+	<table>
+	<tr>
+	<td>Y esta es una tabla.......</td>
+	</tr>
+	<tr>
+	<td><a href="http://www.google.com.ar">con un enlace</a></td>
+	</tr>
+	</table>
+	</body>
+
+-Todo el texto que no este dentro de un enlace o un parrafo tendra color verde.
+-Los links tendran por defecto color gris.
+-Los links que han sido visitados tendran color azul.
+-Los links tendran color fucsia cuando el usuario pase el mouse por encima.
+-Los links tendran color rojo en el momento exacto que el usuario los clickea.
+-Todos los textos tipo parrafo tendran fuente arial o helvetica con un tamaño de fuente de 10px y color de fuente negro.
+-Todos los elementos que tengan la clase "contenido" tendran un tamaño de fuente de 14px y un ancho de fuente tipo "bold".
+-El <p class="contenido" style="font-weight: normal;"> rompe con la norma anterior pues este tendra un ancho de fuente tipo "normal".
+
+Lado derecho:
+	<body class="contenido">
+	<p> Este es un texto................</p>
+	<table>
+	<tr>
+	<td>Y esta es una tabla.......</td>
+	</tr>
+	<tr>
+	<td><a href="http://www.google.com.ar">con un enlace</a></td>
+	</tr>
+	</table>
+	</body>
+
+-Todos los elementos que no sean parrafos tendran un tamaño de fuente de 14px y un ancho de fuente tipo "bold" puesto que lo heredan del body que tien clase "contenido".
+
+Ejercicio 5)
+
+1. h1 em, h2 em, h3 em, h4 em, h5 em, h6 em {color: red;}
+2. div p[href] {color: black;}
+3. #ultimo ul {color: yellow;}
+   #ultimo ul a {color: blue;}
+4. div .importante {color: green;}
+   h1 .importante, h2 .importante, h3 .importante, h4 .importante, h5 .importante, h6 .importante {color: red;}
+5. h1[title] {color: blue;}
+6. ol a:link {color: blue; text-decoration: none;}
+   ol a:visited {color: violet; text-decoration: none;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
