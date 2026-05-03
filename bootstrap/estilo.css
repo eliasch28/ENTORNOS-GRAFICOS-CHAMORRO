@@ -1,0 +1,27 @@
+.contenedor {
+    background-color: #ff0000;
+}
+
+.x, .y, .z, .w , .u{
+    border: 1px solid black;
+}
+
+.x {
+    background-color: #ae00ff;
+}
+
+.y {
+    background-color: #d6ad70;
+}
+
+.z {
+    background-color: #00ff00;
+}
+
+.w {
+    background-color: #9071d8;
+}
+
+.u {
+    background-color: #00c3ff;
+}

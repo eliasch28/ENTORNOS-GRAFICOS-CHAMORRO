@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Formulario de Contacto</h2>
+        <form>
+            <div class="form-group"> //form-group es una clase que hace que los elementos ocupen todo el espacio de su contenedor para que quede lindo
+                <label for="nombre">Nombre:</label>
+                <input type="text" class="form-control" id="nombre" placeholder="Ingresa tu nombre">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" placeholder="nombre@gmail.com">
+            </div>
+
+            <div class="form-group">
+                <label for="telefono">Teléfono:</label>
+                <input type="text" class="form-control" id="telefono" placeholder="Num de telefono">
+            </div>
+
+            <div class="form-group">
+                <label for="asunto">Asunto:</label>
+                <input type="text" class="form-control" id="asunto" placeholder="Motivo del mensaje">
+            </div>
+
+            <div class="form-group">
+                <label for="mensaje">Mensaje:</label>
+                <textarea class="form-control" id="mensaje" rows="4"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-info">Enviar Formulario</button>
+        </form>
+    </div>
+</body>
+</html>
