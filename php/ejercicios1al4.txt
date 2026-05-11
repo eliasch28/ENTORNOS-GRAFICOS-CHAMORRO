@@ -1,0 +1,49 @@
+1- 
+.Variables
+$a -> booleana
+$b -> cadena
+$c -> cadena
+$d -> entero
+$f -> entero
+$g -> entero
+
+.Operadores
+return $i*2; -> se usa el operador binario multiplicación *
+$d+=4; -> se usa el operador de asignacion combinada con adicion
+$d = $a ? ++$d : $d*3; -> se usa el operador ternario "? :" y en ese mismo ejemplo encontramos el operador ++x (incremento instantaneo) y el operador * (multiplicacion)
+$f = doble($d++); -> se usa el operador x++ (incremento post lectura)
+
+.Funciones
+function doble($i) -> la funcion es "doble" y su parametro es $i
+gettype($a) -> la funcion para obtener el tipo de dato del parametro (en este ejemplo $a)
+is_int($d) -> la funcion para ver si el parametro $d es un entero
+is_string($a) -> la funcion para ver si el parametro $a es una cadena
+
+.Estructuras de control
+if(is_int($d)) -> se usa la estructura de control IF para ver si $d es una variable de tipo entero
+if(is_string($a)) -> se usa la estructura de control IF para ver si $a es una variable de tipo cadena
+
+.Salida por pantalla
+boolean
+string
+string
+integer
+1
+xyz
+xyz
+18
+44
+44
+
+
+2a- Los 3 codigos imprimen lo mismo.
+
+2b- Los 4 codigos imprimen lo mismo.
+
+2c- Los 2 codigos imprimen lo mismo.
+
+3a- El codigo crea una tabla con un tamaño al 90% y un borde de tamaño 1. Luego para esa tabla crea 5 filas, cada una con 2 columnas con un espacio en las celdas para que no colapsen.
+
+3b- El codigo se fija si el usuario ya envio el formulario alguna vez o no, si no lo envio nunca entonces muestra el formo para que lo rellene y lo envie. Luego de eso en base a la edad introducida da un mensaje.
+
+4- Primero se produce un warning porque el archivo datos.php todavia no fue incluido y se imprime "El   ". El include permite continuar con el codigo y cuando ya se incluye, muestra "El clavel blanco".
