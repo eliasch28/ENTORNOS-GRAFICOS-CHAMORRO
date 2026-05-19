@@ -1,0 +1,45 @@
+body{
+    background-color: aquamarine;
+}
+
+a{
+    color: red;
+}
+a:hover{
+    color: black;
+}
+.menu{
+    width: 300px;
+    height: 250px;
+    padding: 10px;
+    border: 2px black solid;
+    display: flex;
+    justify-content: center;
+}
+.contenedorTabla{
+    display: flex;
+    justify-content: center;
+}
+.alta {
+    border: 2px solid black;
+    margin: 10px 0;           
+}
+.alta td {  
+    padding: 10px;             
+}
+.alta tr{
+    border-collapse: collapse;
+    border: 1px solid black;  
+}
+td p{
+    text-align: center;
+    margin: 0px;
+}
+tr{
+    display: flex;
+    justify-content: center;
+}
+.txt{
+    text-align: center;
+    margin: 0px;
+}
