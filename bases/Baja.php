@@ -30,10 +30,10 @@ mysqli_free_result($resultado);
                 <td><p>¿Confirma que desea dar de baja esta ciudad?</p></td>
             </tr>
             <tr>
-                <td>
-                    <input type="submit" value="Confirmar Baja">
-                    <p><a href="Menu.html">Volver al Menú</a></p>
-                </td>
+                <td class="txt"><input type="submit" value="Confirmar Baja"></td>
+            </tr>
+            <tr>
+                <td><p><a href="Menu.html">Volver al Menú</a></p></td>
             </tr>
         </table>
     </form>

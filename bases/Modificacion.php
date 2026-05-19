@@ -44,10 +44,10 @@ mysqli_free_result($resultado);
                 <td><p>Nuevo Metro(S/N):</p> <input type="text" name="tieneMetro" required></td><br><br>
             </tr>
             <tr>
-                <td>
-                    <input type="submit" value="Modificar Ciudad">
-                    <p><a href="Menu.html">Volver al Menú</a></p>
-                </td>
+                <td class="txt"><input type="submit" value="Modificar Ciudad"></td>
+            </tr>
+            <tr>
+                <td><p><a href="Menu.html">Volver al Menú</a></p></td>
             </tr>
         </table>
     </form>

@@ -21,11 +21,12 @@ a:hover{
     justify-content: center;
 }
 .alta {
-    border: 2px solid black;
-    margin: 10px 0;           
+    margin: 10px 0;   
+    border: 2px solid black;        
 }
 .alta td {  
-    padding: 10px;             
+    padding: 10px;   
+    border: 1px solid black;           
 }
 .alta tr{
     border-collapse: collapse;
@@ -35,11 +36,21 @@ td p{
     text-align: center;
     margin: 0px;
 }
-tr{
-    display: flex;
-    justify-content: center;
-}
 .txt{
     text-align: center;
     margin: 0px;
+}
+.listado{
+    border: 2px solid black;
+    margin: 10px 0; 
+    border-collapse: collapse;
+}
+.listado td{
+    padding: 10px;  
+    border: 1px solid black;
+}
+
+.lista td{
+    border-collapse: collapse;
+    border: 1px solid black;
 }
