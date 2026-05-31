@@ -8,6 +8,9 @@ $resultado = mysqli_query($link, $consulta);
 
 echo "<h1>Resultados de búsqueda</h1>";
 if (mysqli_num_rows($resultado) > 0) {
+    //como recordatorio, este array es TRUE mientras se pueda seguir 
+    //trayendo contenido desde $resultado, una vez que no haya 
+    //nada más se vuelve NULL y sale del while
     while ($array = mysqli_fetch_array($resultado)) {
         echo "- " . $array['canciones'] . "<br>";
     }
